@@ -3,6 +3,8 @@ var gamespan;
 const GRIDSIZE = 4;
 const SVG_INIT = '<svg viewbox="0 0 120 120" width="100%" height="100%">';
 var tileBack, tileEmpty;
+const full = "#008000";
+const grey = "#e6e6e6";
 
 /// GAME DATA
 var takeLock;
@@ -89,8 +91,6 @@ function drawSquare(pos, size, col) {
 }
 
 function genImg() {
-    var full = "#ffc61a";
-    var grey = "#331a00";
     var size = randInt(3, 4);
     var symm = randInt(0, 2);
     var final = SVG_INIT + drawSquare([0, 0], 120, grey);
@@ -116,10 +116,10 @@ function genImg() {
 
 function genFirst() {
     tileBack = SVG_INIT
-        + drawSquare([0,0], 120, "#ffc61a")
-        + drawSquare([20,20], 80, "#331a00")
+        + drawSquare([0,0], 120, full)
+        + drawSquare([20,20], 80, grey)
         + '</svg>';
-    tileEmpty = SVG_INIT + drawSquare([0,0], 120, "#331a00") + '</svg>';
+    tileEmpty = SVG_INIT + drawSquare([0,0], 120, grey) + '</svg>';
 
     genGrid();
 }
@@ -186,11 +186,11 @@ function genGrid() {
     pexgrid.style["grid-template-columns"] = colAuto;
 }
 
-const SPAN_NEXT_MOVE = 'Kde má obrázek svou dvojici?';
-const SPAN_CORRECT = 'Dobrá práce!';
-const SPAN_INCORRECT = 'Bohužel, tady dvojice není.';
-const SPAN_DONE = 'Výborně! <button onclick="genAgain()">Hrát znovu</button>';
-const SPAN_AGAIN = 'Pojďme znovu!';
+const SPAN_NEXT_MOVE = 'Kde má karta dvojici?';
+const SPAN_CORRECT = 'Správně!';
+const SPAN_INCORRECT = 'Tady dvojice není.';
+const SPAN_DONE = 'Výborně! <button onclick="genAgain()">Hrát znovu.</button>';
+const SPAN_AGAIN = 'Nová hra.';
 
 async function tileClick(x, y) {
     if (takeLock || foundArray[pairingArray[x][y]]) {
