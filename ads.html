@@ -6,6 +6,8 @@
 <head>
     <title>Algoritmy a datové struktury 1 - Cvičení</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -31,21 +33,45 @@
         Na zápočet je třeba získat alespoň dvě třetiny počtu bodů ze standardních úloh (bonusové se počítají jen do vašeho skóre).
     </p>
     
-<!-- 
+
     <h2>Co jsme dělali</h2>
+    
+    <p>
+        <span class="highlight">15.2.:</span> Opakování \(\mathcal{O}\) notace, programování na RAMu.
+        <a href="cviceni/cviko01.pdf">Úlohy (PDF)</a>
+    </p>
 
 
     <h2>Domácí úkoly</h2>
     <p class="addinfo">
         Odevzdávejte buď na papíře před začátkem cvičení, nebo v PDF na e-mail <a href="mailto:mk-hw@seznam.cz">mk-hw@seznam.cz</a>.
     </p>
+    <ul>
+    <li>
+    <span class="highlight">DÚ 1: </span>Naprogramujte na RAMu libovolný třídící algoritmus pracující
+    v čase \(\mathcal{O}(n \log n)\): V buňkách <code>[1]</code> až <code>[n]</code> bude posloupnost
+    celých čísel a po zastavení programu chceme, aby byla setříděná. <b>(10 bodů) Deadline: 1.3.</b>
+    <br>
+    <span class="addinfo">
+        Budete-li odevzdávat e-mailem, nejvhodnější asi bude jednoduchý texťák.
+        <br>
+        Quicksort, co bere za pivot vždy první buňku taky uznám (řekněme, že posloupnost
+        je na začátku náhodně zpermutovaná).
+        <br>
+        Může se hodit <a href="https://iuuk.mff.cuni.cz/~husek/ram-sim/ram_simulator.html">simulátor RAMu</a>
+        od Radka Huška. Jeho syntaxe se neshoduje s tou z přednášky, ale budu ji uznávat.
+    </span></li>
+    <li><span class="highlight">Bonusový úkol 1: </span>Uvažme RAM s neomezenou kapacitou buněk a s počítáním
+        aritmetických operací v konstantním čase. Vymyslete, jak v tomto modelu násobit čtvercové
+        matice \(n\times n\) v čase \(\mathcal{O}(n^2)\). <b>(10 bodů) Deadline: 1.3.</b></li>
+    </ul>
+    <!--
     <p class="addinfo">
         Cílem úkolu není, abyste napsali program v nějakém programovacím jazyce, proto neodevzdávejte zdrojové kódy.
         Jak řešení má vypadat dost dobře vystihihují <a href="https://ksp.mff.cuni.cz/h/pravidla/#teoreticke-ulohy">pravidla řešení teoretických úloh KSP</a>.
     </p>
+    -->
 
- -->
-    
     <h2>Užitečné odkazy</h2>
     <p>
         <a href="https://mj.ucw.cz/vyuka/2223/ads1/">Stránka přednášky.</a>
