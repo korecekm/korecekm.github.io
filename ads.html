@@ -65,7 +65,7 @@
         <a href="cviceni/cviko04.pdf">Úlohy (PDF)</a>
     </p>
     <p>
-        <span class="highlight">15.3.:</span>Pokračování Dijkstry, Bellman-Ford.
+        <span class="highlight">15.3.:</span> Pokračování Dijkstry, Bellman-Ford.
         <a href="cviceni/cviko05.pdf">Úlohy (PDF)</a>
     </p>
     <p class="addinfo">
@@ -75,6 +75,10 @@
     <p class="addinfo">
         IDA* bohužel v Průvodci nenajdete, ale můžete si o něm přečíst např. na
         <a href="https://en.wikipedia.org/wiki/Iterative_deepening_A*">Wikipedii</a>.
+    </p>
+    <p>
+        <span class="highlight">22.3.:</span> Minimální kostry.
+        <a href="cviceni/cviko06.pdf">Úlohy (PDF)</a>
     </p>
 
 
@@ -123,6 +127,17 @@
     </li>
     <li><span class="highlight">DÚ 5: </span>Silnice v mapě máme ohodnocené dvěma nezápornými čísly: délkou a mýtem
         (poplatkem za projetí). Jak najít nejlevnější z nejkratších cest mezi dvěma zadanými místy? <b>(10 bodů) Deadline: 29.3.</b>
+    </li>
+    <li><span class="highlight">DÚ 6: </span>Posíláme po síti velké množství obrázků a chceme, aby to netrvalo dlouho.
+        Každý obrázek má \(B\) bytů a můžeme ho buď poslat samostatně nezávisle na ostatních, nebo jako zakódovaný rozdíl oproti
+        jinému, již přenesenému snímku.
+        Rozdíly mezi snímky už máme předpočítané, takže pro \(i\)-tý a \(j\)-tý obrázek můžeme v konstantním čase najít
+        \(D_{ij}\), velikost rozdílu mezi nimi v bytech.
+        <br>
+        Navrhněte algoritmus, který najde pořadí a způsob (celý obrázek vs. diff s již odeslaným obrázkem) odesílání obrázků,
+        abychom celkem odeslali co nejméně bytů dat. O hodnotách \(D_{ij}\) víme jen, že \(D_{ij} = D_{ji}~\forall i, j\).
+        Hodnoty \(D_{ij}\) a \(D_{jk}\) nic neříkají o \(D_{ik}\).
+        <b>(10 bodů) Deadline: 5.4.</b> 
     </li>
     </ul>
 
