@@ -94,7 +94,8 @@
     </p>
     <p>19.4.: <span class="addinfo">Cvičení nebylo.</span></p>
     <p>
-        <span class="highlight">26.4.</span> Budeme v N7.
+        <span class="highlight">26.4.</span> Rozděl a panuj.
+        <a href="cviceni/cviko10.pdf">Úlohy (PDF)</a>
     </p>
 
 
@@ -171,6 +172,23 @@
         Navrhněte, jak toto zaručit postupným zmenšováním tabulky když počet prvků klesne pod nějakou úroveň.
         Posloupnost \(x\) <i>insert</i>ů a \(y\) <i>delet</i>ů v libovolném pořadí by měla zabrat čas \(\mathcal{O}(x+y)\).
         <b>(10 bodů) Deadline: 26.4.</b>
+    </li>
+    <li><span class="highlight">DÚ 10: </span>Zlepší se časová efektivita binárního vyhledávání, pokud
+        interval nebudeme půlit, ale dělit na třetiny? Snadno se rozmyslí, že asymptotická složitost zůstane \(\Theta(\log n)\),
+        ale jak je to s konstantami? Spočtěte, jak efektivní takové "ternární″ vyhledávání je oproti binárnímu.
+        <b>(10 bodů) Deadline: 10.5.</b>
+    </li>
+    <li><span class="highlight">Bonusový úkol 2: </span>Aerolinka "<i>Eastward</i>″ léta pouze na východ.
+        Města, mezi kterými létá, se dají jednoznačně seřadit od nejzápadnějšího po nejvýchodnější na \(m_1,\ldots,m_n\).
+        Chceme, aby bylo možné z každého města \(m_i\) doletět do libovolného východnějšího města \(m_j\) \((i < j)\).
+        Aby to šlo bez přestupu, potřebovali by <i>Eastward</i> provozovat \(\Omega(n^2)\) spojů.
+        Můžeme taky mít spoje jen mezi městy \(m_i\) a \(m_{i+1}\), pak ale někteří pasážéři budou muset přestupovat \(\Omega(n)\)-krát,
+        než se dostanou do cíle.
+        <br>
+        Navrhněte proto \(\mathcal{O}(n \log n)\) spojů mířících pouze na východ, které zajistí, že žádný cestující nebude
+        muset přestoupit víc než jednou. <i>Eastward</i> operuje na placaté Zeměploše, takže z města \(m_n\) se nedá dostat do
+        města \(m_1\) letem na východ.
+        <b>(10 bodů) Deadline: 10.5.</b>
     </li>
     </ul>
 
