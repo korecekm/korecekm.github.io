@@ -1,17 +1,43 @@
-html, body {
-    height: 100%;
-}
-
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-color: #f5f5f5;
 }
 
-h1, h2, h3 {
-    color: #008000;
+header {
+    background-color: #014301;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
 h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+a {
+    color: #008000;
+}
+.highlight {
+    color: #008000;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+.section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.section:last-child {
+    border-bottom: none;
+}
+.section h2 {
+    font-size: 24px;
     margin-top: 0;
 }
 
@@ -24,33 +50,56 @@ h1 {
     background: #008000;
 }
 
-#content {
-    background: white;
-    margin: 0 auto;
-    max-width: 900px;
-    min-height: calc(100%-18px);
-    padding: 18px 16px;
+.itemize {
+    list-style-type: disc; /* Use disc bullets for itemized list */
+    padding-left: 20px; /* Add some left padding to the list */
+}
+li{
+    margin: 10px 0;
+  }
+
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
 }
 
-a {
-    color: #008000;
+@media (prefers-color-scheme: dark) {
+    /* Dark theme styles */
+    body {
+        background-color: #1c331c;
+        color: #fff;
+    }
+    header {
+        background-color: #222;
+    }
+    .content {
+        background-color: #444;
+    }
+    .section {
+        border-bottom: 1px solid #555;
+    }
+    
+    a {
+        color: #0ff30f;
+    }
+    .highlight {
+        color: #0ff30f;
+    }
 }
-.highlight {
-    color: #008000;
-}
+
 .addinfo {
-    color: grey;
+    color: #777;
 }
 .addinfo a{
     color: #4be74b;
 }
 
 button {
-    background-color: #008000;
+    background-color: #1c331c;
     color: #f2f2f2;
-    border-color: #f2f2f2;
+    border-color: #a6a6a6;
     border-style: solid;
-    font-family: serif;
     font-size: inherit;
     margin: 0 6px 0 6px;
     padding: 0 12px 0 12px;

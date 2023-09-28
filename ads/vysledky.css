@@ -1,3 +1,8 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
 table, th, td {
     border: 1px solid #008000;
     border-collapse: collapse;
@@ -18,4 +23,17 @@ h1, h2, h3 {
 ::selection {
     color: white;
     background: #008000;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1c331c;
+        color: #fff;
+    }
+    h1, h2, h3 {
+        color: #fff;
+    }
+    table, th, td {
+        border: 1px solid #fff;
+    }
 }

@@ -3,8 +3,8 @@ var gamespan;
 const GRIDSIZE = 4;
 const SVG_INIT = '<svg viewbox="0 0 120 120" width="100%" height="100%">';
 var tileBack, tileEmpty;
-const full = "#008000";
-const grey = "#e6e6e6";
+const full = "#a6a6a6";
+const grey = "#1c331c";
 
 /// GAME DATA
 var takeLock;
