@@ -56,6 +56,8 @@ a {
 }
 li{
     margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
   }
 
 @media (max-width: 768px) and (orientation: portrait) {
@@ -86,6 +88,9 @@ li{
     }
     .highlight {
         color: #0ff30f;
+    }
+    li {
+        border-bottom: 1px solid #555;
     }
 }
 
