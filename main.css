@@ -54,11 +54,14 @@ a {
     list-style-type: disc; /* Use disc bullets for itemized list */
     padding-left: 20px; /* Add some left padding to the list */
 }
-li{
+li {
     margin: 10px 0;
     padding-bottom: 10px;
+}
+
+.hw {
     border-bottom: 1px solid #ccc;
-  }
+}
 
 @media (max-width: 768px) and (orientation: portrait) {
     .content {
@@ -89,7 +92,7 @@ li{
     .highlight {
         color: #0ff30f;
     }
-    li {
+    .hw {
         border-bottom: 1px solid #555;
     }
 }

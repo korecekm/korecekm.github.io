@@ -111,7 +111,7 @@
             nejpozději ve 23:00 den před cvičením.
         </p>
         <ul class="itemize">
-            <li>
+            <li class="hw">
                 <span class="highlight">Úkol 1: </span>
                 Definujme Fibonacciho slova takto: $F_0 = a$, $F_1 = b$, $F_{n+2} = F_nF_{n+1}$, kde $a$ a $b$ jsou
                 <i>libovolná různá</i> písmena.
@@ -126,7 +126,7 @@
                 <br>
                 <b>(10 bodů) Deadline: 23.&nbsp;10.</b>
             </li>
-            <li>
+            <li class="hw">
                 <span class="highlight">Úkol 2: </span>
                 Zjistěte, který řetězec délky $k$ se v textu $S$ vyskytuje nejčastěji.
                 Cílíme na lineární střední hodnotu délky běhu (vůči velikosti vstupu).
@@ -134,7 +134,7 @@
                 <br>
                 <b>(10 bodů) <del>Deadline: 30.&nbsp;10.</del> Deadline posunut na 6.&nbsp;11.</b>
             </li>
-            <li>
+            <li class="hw">
                 <span class="highlight">Úkol 3: </span>
                 Hranová souvislost (neorientovaného) grafu je minimální počet hran, které musíme odebrat,
                 aby se stal nesouvislým. Najděte algoritmus na zjištění hranové souvislosti neorientovaného grafu pomocí toků v sítích.
@@ -149,14 +149,14 @@
                 <br>
                 <b>(10 bodů) Deadline: 6.&nbsp;11.</b>
             </li>
-            <li>
+            <li class="hw">
                 <span class="highlight">Úkol 4: </span>
                 Tentokrát dva úkoly: <a href="cviceni/du04.pdf">Zadání (PDF)</a>.
                 <br>
                 <br>
                 <b>(12 bodů) Deadline až 4.&nbsp;12.</b>
             </li>
-            <li>
+            <li class="hw">
                 <span class="highlight">Úkol 5 (BONUSOVÝ): </span>
                 Spočtěte Fourierův obraz vektoru $(1, i, -1, -i, 1, i, -1, -i, \dots)$ délky $n$ dělitelné
                 $4$ (kde $i=\sqrt{-1}$). Kromě samotného výsledku (který vyjde hezky) je potřeba sepsat i zdůvodnění/výpočty.
@@ -168,21 +168,21 @@
                 <span class="addinfo">Pro zájemce jsem sepsal <a href="cviceni/vzor05.pdf">vzorové řešení (PDF)</a>.
                     Soubor obsahuje dva možné přístupy k řešení úlohy, a navíc nějaké doplňující povídání k DFT.</span>
             </li>
-            <li>
+            <li class="hw">
                 <span class="highlight">Úkol 6: </span>
                 Dokažte, že $n$-bitový <code>OR</code> nelze spočítat v menší než logaritmické hloubce.
                 <br>
                 <br>
                 <b>(10 bodů) Deadline: 11.&nbsp;12.</b>
             </li>
-            <li>
+            <li class="hw">
                 <span class="highlight">Úkol 7: </span>
                 Ukažte, jak v logaritmické hloubce otestovat, zda je $n$-bitové číslo dělitelné sedmi.
                 <br>
                 <br>
                 <b>(10 bodů) Deadline: 18.&nbsp;12.</b>
             </li>
-            <li>
+            <li class="hw">
                 <span class="highlight">Úkol 8 (BONUSOVÝ): </span>
                 Sestrojte hradlovou síť polylogaritmické hloubky, která dostane matici
                 sousednosti neorientovaného grafu a rozhodne, zda je graf souvislý.
@@ -190,10 +190,49 @@
                 <br>
                 <b>(10 bodů) Deadline: 18.&nbsp;12.</b>
             </li>
-            <li>
+            <li class="hw">
                 <span class="highlight">Úkol 9: </span>
                 Navrhněte algoritmus pro výpočet obsahu (potenciálně nekonvexního) mnohoúhelníku.
                 Vrcholy jsou zadané v pořadí, jak následují na obvodu.
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 8.&nbsp;1.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 10: </span>
+                Rozhodovací problém "<i>$k$ skupin</i>" řeší následující otázku. Mějme $n$ lidí, kteří
+                jsou aktivní v $m$ společenských skupinách. Instance "$k$ skupin" dostane seznam těchto $n$ lidí,
+                seznam jejich $m$ skupin (pro každou skupinu seznam jejích členů) a parametr $k$.
+                Ptáme se, zda existuje $k$ (nebo méně) skupin takových, že každý z $n$ lidí je alespoň v jedné z nich.
+                <br>
+                <br>
+                <i>Příklad: </i>Seznam lidí bude "Anna, Bedřich, Cyril, Dagmar", a ti jsou aktivní ve skupinách
+                <ul>
+                    <li>Fotbalisti: Bedřich, Dagmar</li>
+                    <li>Klavíristi: Anna, Dagmar</li>
+                    <li>Malíři: Anna, Cyril</li>
+                </ul>
+                Parametr $k$ je nastaven na $2$. Tady je odpověď "ano", protože stačí vzít skupiny "Fotbalisti" a "Malíři".
+                Kdyby chyběla skupina Malíři, odpověď by byla "ne" už jen proto, že Cyril není v žádné skupině.
+                <br>
+                <br>
+                <i>Váš úkol: </i>Ukažte, že problém SAT z přednášky lze polynomiálně převést na problém $k$ skupin.
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 8.&nbsp;1.</b>
+            </li>
+            <li>
+                <span class="highlight">Úkol 11 (BONUSOVÝ): </span>
+                Vzpomeňme, že booleovských funkcí $n$ proměnných je celkem $2^{2^n}$. 
+                Taky jsme viděli, že každou booleovskou funkci jde řešit lineárně hlubokou hradlovou sítí s exponenciálně mnoha hradly.
+                <br>
+                <br>
+                Ukažte, že polynomiální množství hradel nestačí. Přesněji, dokažte, že pro žádné $k$ neplatí,
+                že každá $n$-vstupová booleovská funkce lze spočítat obvodem s $\mathcal{O}(n^k)$ hradly.
+                <br>
+                <span class="addinfo">(To speciálně implikuje existenci konkrétních booleovských funkcí, pro které $\mathcal{O}(n^k)$
+                    hradel nestačí. Můžete taky rozmyslet, že nemůsíme končit u polynomů. Lze to dokázat i pro rychleji rostoucí funkce.)
+                </span>
                 <br>
                 <br>
                 <b>(10 bodů) Deadline: 8.&nbsp;1.</b>
