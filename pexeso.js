@@ -186,11 +186,11 @@ function genGrid() {
     pexgrid.style["grid-template-columns"] = colAuto;
 }
 
-const SPAN_NEXT_MOVE = 'Kde má karta dvojici?';
-const SPAN_CORRECT = 'Správně!';
-const SPAN_INCORRECT = 'Tady dvojice není.';
-const SPAN_DONE = 'Výborně! <button onclick="genAgain()">Hrát znovu.</button>';
-const SPAN_AGAIN = 'Nová hra.';
+const SPAN_NEXT_MOVE = "Where is this card's pair hidden?";
+const SPAN_CORRECT = 'Correct!';
+const SPAN_INCORRECT = 'Somewhere else.';
+const SPAN_DONE = 'Well done! <button onclick="genAgain()">Play again.</button>';
+const SPAN_AGAIN = 'New game.';
 
 async function tileClick(x, y) {
     if (takeLock || foundArray[pairingArray[x][y]]) {
