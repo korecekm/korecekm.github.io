@@ -27,7 +27,7 @@ a {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #f5f5f5;
 }
 .section {
     padding: 20px 0;
@@ -73,7 +73,7 @@ li {
 @media (prefers-color-scheme: dark) {
     /* Dark theme styles */
     body {
-        background-color: #1c331c;
+        background-color: #444;
         color: #fff;
     }
     header {
