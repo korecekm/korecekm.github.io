@@ -63,9 +63,9 @@ li {
     border-bottom: 1px solid #ccc;
 }
 
-@media (max-width: 768px) and (orientation: portrait) {
+@media (orientation: portrait) {
     .content {
-        margin: 0;
+        max-width: none;
         padding: 10px;
     }
 }
