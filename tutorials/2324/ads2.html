@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+
+<head>
+    <title>Algoritmy a datové struktury 2 - Cvičení</title>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] }
+        });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<header>
+    <h1>Algoritmy a datové struktury 2 &ndash; cvičení</h1>
+</header>
+
+<div class="content">
+    <p class="addinfo">Cvičil Martin Koreček k <a href="https://mj.ucw.cz/vyuka/2324/ads2/">přednášce Martina Mareše</a>.</p>
+    <p class="addinfo">Zimní semestr 2023/24, pondělí 10:40, učebna S11.</p>
+
+    <div class="section">
+        <h2>Podmínky pro získání zápočtu</h2>
+        <p>
+            Pravidelně budu zadávat domácí úkoly. Občas můžu zadat bonusový úkol.
+        </p>
+        <p>
+            Na zápočet je třeba získat alespoň dvě třetiny počtu bodů ze standardních úloh (bonusové se počítají jen do vašeho skóre).
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Co se probralo</h2>
+        
+        <p>
+            <span class="highlight">2.&nbsp;10.:</span> Opakování ADS 1, různé úlohy
+            (cvičení před první přednáškou).
+            <a href="cviceni/cviko01.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">9.&nbsp;10.:</span> Algoritmus KMP.
+            <a href="cviceni/cviko02.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">16.&nbsp;10.:</span> Aho-Corasick, Rabin-Karp.
+            <a href="cviceni/cviko03.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">23.&nbsp;10.:</span> Toky v sítích, Ford-Fulkersonův algoritmus, bipartitní párování.
+            <a href="cviceni/cviko04.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">30.&nbsp;10.:</span> Toky v sítích, Dinicův algoritmus.
+            <a href="cviceni/cviko05.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">6.&nbsp;11.:</span> Nenavazovali jsme na přednášku, místo standardního cvičení jsem pověděl něco o
+            Fourierově transformaci (<a href="ads/fourier.pdf">tady</a> jsou slajdy, které jsem promítal).
+        </p>
+        <p>
+            Pro zájemce jsem nachystal nějaké úlohy: <a href="cviceni/cviko06.pdf">Zadání (PDF)</a>
+        </p>
+        <p>
+            <span class="addinfo">Doporučení: 3blue1brown má několik pěkných videí o Fourierově transformaci. První video série je
+                <a href="https://youtu.be/spUNpyF58BY?si=6usyHhdKFjeqQ6Dy">tohle</a>.</span>
+        </p>
+        <p>
+            <span class="highlight">13.&nbsp;11.:</span> Toky v sítích, Goldbergův algoritmus.
+            <a href="cviceni/cviko07.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">20.&nbsp;11.:</span> Diskrétní Fourierova transformace a algoritmus FFT.
+            Místo mě cvičení připravil a vedl <a href="https://iuuk.mff.cuni.cz/~vesely/">Pavel Veselý</a>. <a href="cviceni/cviko08.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">27.&nbsp;11.:</span> Úvod do hradlových sítí. <a href="cviceni/cviko09.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">4.&nbsp;12.:</span> Pokračování hradlových sítí, něco ke konvexnímu obalu v rovině.
+            <a href="cviceni/cviko10.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">11.&nbsp;12.:</span> Geometrické algoritmy.
+            <a href="cviceni/cviko11.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">18.&nbsp;12.:</span> Úvod do studia těžkých problémů, převody mezi problémy.
+            <a href="cviceni/cviko12.pdf">Úlohy (PDF)</a>
+        </p>
+        <p>
+            <span class="highlight">8.&nbsp;1.:</span> Povídal jsem o problému P vs. NP. K
+            <a href="cviceni/cviko13.pdf">úlohám (PDF)</a> jsme se nedostali.
+        </p>
+        <p>
+            <span class="addinfo">Na cviku jsem řekl (minimálně) jednu hloupost: že $\mathcal{P}^{SAT} = \mathcal{NP}^{SAT}$.
+                Pokud $\mathcal{P} = \mathcal{NP}$, tak to samozřejmě platí, ale rozbije to několik aktuálních hypotéz
+                (např. <a href="https://en.wikipedia.org/wiki/Polynomial_hierarchy">polynomiální hierarchii</a>).
+                Pokud vás zajímá, o kterých orákulech $A, B$ platí $\mathcal{NP}^A = \mathcal{P}^A$ a
+                $\mathcal{NP}^B \neq \mathcal{P}^B$, můžete si přečíst
+                <a href="https://pages.cs.wisc.edu/~jyc/02-810notes/lecture08.pdf">tyhle zápisky</a>.
+            </span>
+        </p>
+        <p>
+            <span class="addinfo">Pokud vás cokoli během cvika zaujalo, můžete mi napsat
+                a já vám zkusím doporučit další zdroje (případně předměty na MFF) k tématu.
+            </span>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Domácí úkoly</h2>
+        <p class="addinfo">
+            Odevzdávejte buď na papíře před začátkem cvičení, nebo v TXT/PDF na e-mail <a href="mailto:mk-hw@seznam.cz">mk-hw@seznam.cz</a>
+            nejpozději ve 23:00 den před cvičením.
+        </p>
+        <ul class="itemize">
+            <li class="hw">
+                <span class="highlight">Úkol 1: </span>
+                Definujme Fibonacciho slova takto: $F_0 = a$, $F_1 = b$, $F_{n+2} = F_nF_{n+1}$, kde $a$ a $b$ jsou
+                <i>libovolná různá</i> písmena.
+                <br>
+                Jak v zadaném řetězci (nad potenciálně velkou abecedou) najít nejdelší Fibonacciho podslovo v lineárním čase?
+                <br>
+                <span class="addinfo">
+                    Pozor, že $a$ a $b$ v zadání figurují jako proměnné, tedy například ve slově
+                    CDCBBCBDC je nejdelší Fibonacciho podslovo CBBCB.
+                </span>
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 23.&nbsp;10.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 2: </span>
+                Zjistěte, který řetězec délky $k$ se v textu $S$ vyskytuje nejčastěji.
+                Cílíme na lineární střední hodnotu délky běhu (vůči velikosti vstupu).
+                <br>
+                <br>
+                <b>(10 bodů) <del>Deadline: 30.&nbsp;10.</del> Deadline posunut na 6.&nbsp;11.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 3: </span>
+                Hranová souvislost (neorientovaného) grafu je minimální počet hran, které musíme odebrat,
+                aby se stal nesouvislým. Najděte algoritmus na zjištění hranové souvislosti neorientovaného grafu pomocí toků v sítích.
+                <br>
+                Snažte se použít jen $\mathcal{O}(n)$ sítí s $\mathcal{O}(m)$ hranami ($n$ značí počet vrcholů, $m$ počet hran).
+                <br>
+                <br>
+                Jak postup upravit pro vrcholovou souvislost (nejmenší počet vrcholů, které musíme odebrat pro nesouvislost, případně $n$
+                pro úplný graf $K_n$)? Zde můžete použít více než $\mathcal{O}(n)$ sítí, ale snažte se o asymptoticky méně než $\mathcal{O}(n^2)$
+                pro grafy s vrcholovou souvislostí $o(n)$, tj. pro grafy s nízkou vrcholovou souvislostí.
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 6.&nbsp;11.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 4: </span>
+                Tentokrát dva úkoly: <a href="cviceni/du04.pdf">Zadání (PDF)</a>.
+                <br>
+                <br>
+                <b>(12 bodů) Deadline až 4.&nbsp;12.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 5 (BONUSOVÝ): </span>
+                Spočtěte Fourierův obraz vektoru $(1, i, -1, -i, 1, i, -1, -i, \dots)$ délky $n$ dělitelné
+                $4$ (kde $i=\sqrt{-1}$). Kromě samotného výsledku (který vyjde hezky) je potřeba sepsat i zdůvodnění/výpočty.
+                <br>
+                <br>
+                <b>(5 bodů) Deadline: 4.&nbsp;12.</b>
+                <br>
+                <br>
+                <span class="addinfo">Pro zájemce jsem sepsal <a href="cviceni/vzor05.pdf">vzorové řešení (PDF)</a>.
+                    Soubor obsahuje dva možné přístupy k řešení úlohy, a navíc nějaké doplňující povídání k DFT.</span>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 6: </span>
+                Dokažte, že $n$-bitový <code>OR</code> nelze spočítat v menší než logaritmické hloubce.
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 11.&nbsp;12.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 7: </span>
+                Ukažte, jak v logaritmické hloubce otestovat, zda je $n$-bitové číslo dělitelné sedmi.
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 18.&nbsp;12.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 8 (BONUSOVÝ): </span>
+                Sestrojte hradlovou síť polylogaritmické hloubky, která dostane matici
+                sousednosti neorientovaného grafu a rozhodne, zda je graf souvislý.
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 18.&nbsp;12.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 9: </span>
+                Navrhněte algoritmus pro výpočet obsahu (potenciálně nekonvexního) mnohoúhelníku.
+                Vrcholy jsou zadané v pořadí, jak následují na obvodu.
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 8.&nbsp;1.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 10: </span>
+                Rozhodovací problém "<i>$k$ skupin</i>" řeší následující otázku. Mějme $n$ lidí, kteří
+                jsou aktivní v $m$ společenských skupinách. Instance "$k$ skupin" dostane seznam těchto $n$ lidí,
+                seznam jejich $m$ skupin (pro každou skupinu seznam jejích členů) a parametr $k$.
+                Ptáme se, zda existuje $k$ (nebo méně) skupin takových, že každý z $n$ lidí je alespoň v jedné z nich.
+                <br>
+                <br>
+                <i>Příklad: </i>Seznam lidí bude "Anna, Bedřich, Cyril, Dagmar", a ti jsou aktivní ve skupinách
+                <ul>
+                    <li>Fotbalisti: Bedřich, Dagmar</li>
+                    <li>Klavíristi: Anna, Dagmar</li>
+                    <li>Malíři: Anna, Bedřich, Cyril</li>
+                </ul>
+                Parametr $k$ je nastaven na $2$. Tady je odpověď "ano", protože stačí vzít skupiny "Fotbalisti" a "Malíři".
+                Kdyby chyběla skupina Malíři, odpověď by byla "ne" už jen proto, že Cyril není v žádné skupině.
+                <br>
+                <br>
+                <i>Váš úkol: </i>Ukažte, že problém SAT z přednášky lze polynomiálně převést na problém $k$ skupin.
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 8.&nbsp;1.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 11 (BONUSOVÝ): </span>
+                Vzpomeňme, že booleovských funkcí $n$ proměnných je celkem $2^{2^n}$. 
+                Taky jsme viděli, že každou booleovskou funkci jde řešit lineárně hlubokou hradlovou sítí s exponenciálně mnoha hradly.
+                <br>
+                <br>
+                Ukažte, že polynomiální množství hradel nestačí. Přesněji, dokažte, že pro žádné $k$ neplatí,
+                že každá $n$-vstupová booleovská funkce lze spočítat obvodem s $\mathcal{O}(n^k)$ hradly.
+                <br>
+                <span class="addinfo">(To speciálně implikuje existenci konkrétních booleovských funkcí, pro které $\mathcal{O}(n^k)$
+                    hradel nestačí. Můžete taky rozmyslet, že nemusíme končit u polynomů. Lze to dokázat i pro rychleji rostoucí funkce.)
+                </span>
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: 8.&nbsp;1.</b>
+            </li>
+            <li class="hw">
+                <span class="highlight">Úkol 12 (BONUSOVÝ): </span>
+                Převeďte problém <b>Klika</b> na <b>SAT</b> (přímo, bez odvolání na Cookovu větu).
+                <br>
+                <span class="addinfo">Hint: hledejte očíslovanou kliku - tj. uspořádanou 
+                    $k$-tici vrcholů, které tvoří kliku.</span>
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: kdy chcete zápočet</b>
+            </li>
+            <li>
+                <span class="highlight">Úkol 13 (BONUSOVÝ): </span>
+                Sestrojte hradlovou síť, která pro zadané dvojkové číslo $x_{n-1}\ldots x_0$ spočítá
+                dolní celou část z jeho dvojkového logaritmu, tj. $\lfloor \log_2 x \rfloor$.
+                <br>
+                <br>
+                <b>(10 bodů) Deadline: kdy chcete zápočet</b>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <p>
+            Bodové výsledky: <a href="ads/vysledky">Tabulka bodů</a>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Užitečné odkazy</h2>
+        <p>
+            <a href="https://mj.ucw.cz/vyuka/2324/ads2/">Stránka přednášky.</a>
+        </p>
+        <p>
+            Knížka <a href="http://pruvodce.ucw.cz/">Průvodce labyrintem algoritmů</a>, která pokrývá (nejen) sylabus předmětu.
+        </p>
+        <p>
+            Archiv úloh <a href="https://ksp.mff.cuni.cz/h/ulohy/">Korespondenčního semináře z programování.</a>
+        </p>
+        <p>
+            Soutěžní programování: <a href="https://codeforces.com/">Codeforces</a>, <a href="https://www.spoj.com/">Spoj</a>,
+            <a href="https://www.hackerrank.com/dashboard">HackerRank</a>, <a href="https://www.codechef.com/">CodeChef</a>.
+        </p>
+        <p>
+            Zábavné kódící úlohy: <a href="https://projecteuler.net/">Project Euler</a>.
+        </p>
+    </div>
+</div>
+
+</body>
