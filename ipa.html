@@ -48,9 +48,39 @@
     <div class="section">
         <h2>Tutorial content</h2>
         
-        <br>
-        <span class="addinfo">TBD...</span>
+        <p>
+            <span class="highlight">8.&nbsp;10.:</span> Introductory exercises.
+            <a href="pa/t01.pdf">Exercise sheet (PDF)</a>
+        </p>
+    </div>
 
+    <div class="section">
+        <h2>Links</h2>
+        <p>
+            <a href="https://research.koutecky.name/db/teaching:intro_par_alg2627">Webpage of the lecture</a>
+        </p>
+        <p>
+            <a href="https://pacechallenge.org/">PACE Challenge:</a> Yearly challenge to design and implement algorithms for hard problems.
+        </p>
+        <p>
+            <b>Parameterized algorithms in practice:</b>
+            <br>
+            <i>The course is a theoretical one. Most practical problems don't have a clean definition, plus the problem
+                definition changes over time, making our approaches all but useless (our running times will often be tractable only in theory, too).
+                In such places MILP (and other) solvers are used in practice.
+                Throughout the course, we will explore nice algorithmic ideas, and try to see what makes hard problems hard.</i>
+            <br>
+            <i>This doesn't mean that FPT algorithms don't have their place in practice:</i>
+            <ul>
+                <li>Genome scaffolding is a clean NP-hard problem with a low natural parameter, leading to the <a href="https://link.springer.com/article/10.1186/s13059-016-0951-y">Opera</a> parameterized algorithm.
+                <a href="https://academic.oup.com/bioinformatics/article/29/4/428/198425?login=true">Scarpa</a> combines FPT and linear programming for the same problem.</li>
+                <li>Several other NP-hard string problems coming from genetics have seen such parameterized solutions, see <a href="https://www.mdpi.com/1999-4893/12/12/256">Parameterized Algorithms in Bioinformatics</a>.</li>
+                <li><a href="https://github.com/dRehfeldt/SCIPJack-Steiner-tree-solver">SCIP-Jack</a> is a fast Steiner tree solver which beats generic MILP and SAT solvers at ST (and started as a contestant at PACE 2018). Besides the FPT approach, this uses linear programming and custom heuristics.</li>
+                <li>Other such solvers: <a href="https://github.com/marvel2010/k-terminal-cut">k-terminal-cut</a>,
+                <a href="https://www.sciencedirect.com/science/article/pii/S0196677400911416">sparse allocation (motivated by VLSI manufacturing)</a>, <a href="https://www.sciencedirect.com/science/article/pii/S0196677400911416">FPT approximation of scheduling</a>.
+                <i>Actual practicality is debatable here, as again, these problems have very clean definitions, and I haven't been able to find places where these have been deployed practically.</i></li>
+            </ul>
+        </p>
     </div>
 </div>
 
